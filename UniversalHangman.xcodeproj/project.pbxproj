@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D6CB1A0A1650292200D1A257 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1A091650292200D1A257 /* UIKit.framework */; };
+		D6CB1A0C1650292200D1A257 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1A0B1650292200D1A257 /* Foundation.framework */; };
+		D6CB1A0E1650292200D1A257 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1A0D1650292200D1A257 /* CoreGraphics.framework */; };
+		D6CB1A141650292200D1A257 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6CB1A121650292200D1A257 /* InfoPlist.strings */; };
+		D6CB1A161650292200D1A257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB1A151650292200D1A257 /* main.m */; };
+		D6CB1A1A1650292200D1A257 /* LJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB1A191650292200D1A257 /* LJAppDelegate.m */; };
+		D6CB1A1C1650292200D1A257 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6CB1A1B1650292200D1A257 /* Default.png */; };
+		D6CB1A1E1650292200D1A257 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6CB1A1D1650292200D1A257 /* Default@2x.png */; };
+		D6CB1A201650292200D1A257 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6CB1A1F1650292200D1A257 /* Default-568h@2x.png */; };
+		D6CB1A231650292200D1A257 /* LJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6CB1A221650292200D1A257 /* LJViewController.m */; };
+		D6CB1A261650292200D1A257 /* LJViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CB1A241650292200D1A257 /* LJViewController_iPhone.xib */; };
+		D6CB1A291650292200D1A257 /* LJViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CB1A271650292200D1A257 /* LJViewController_iPad.xib */; };
+		D6D5DEEF165B279400C8015A /* WordLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DEEC165B279400C8015A /* WordLookupViewController.m */; };
+		D6D5DEF0165B279400C8015A /* WordLookupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DEEE165B279400C8015A /* WordLookupViewController.xib */; };
+		D6D5DEF5165B27C300C8015A /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DEF3165B27C300C8015A /* FlipsideViewController.m */; };
+		D6D5DEF6165B27C300C8015A /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DEF4165B27C300C8015A /* FlipsideView.xib */; };
+		D6D5DEF9165B27D300C8015A /* EquivalenceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DEF8165B27D300C8015A /* EquivalenceClass.m */; };
+		D6D5DEFB165B27E100C8015A /* MainView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DEFA165B27E100C8015A /* MainView_iPad.xib */; };
+		D6D5DEFD165B27EE00C8015A /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DEFC165B27EE00C8015A /* MainView.xib */; };
+		D6D5DF06165B27FE00C8015A /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DEFE165B27FE00C8015A /* Default-Portrait@2x~ipad.png */; };
+		D6D5DF07165B27FE00C8015A /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DEFF165B27FE00C8015A /* Default-Portrait~ipad.png */; };
+		D6D5DF08165B27FE00C8015A /* Icon~iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF00165B27FE00C8015A /* Icon~iPad@2x.png */; };
+		D6D5DF09165B27FE00C8015A /* Icon~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF01165B27FE00C8015A /* Icon~iPad.png */; };
+		D6D5DF0A165B27FE00C8015A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF02165B27FE00C8015A /* Icon@2x.png */; };
+		D6D5DF0B165B27FE00C8015A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF03165B27FE00C8015A /* Icon.png */; };
+		D6D5DF0C165B27FE00C8015A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF04165B27FE00C8015A /* Default.png */; };
+		D6D5DF0D165B27FE00C8015A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF05165B27FE00C8015A /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D6CB1A051650292200D1A257 /* UniversalHangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalHangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6CB1A091650292200D1A257 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D6CB1A0B1650292200D1A257 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D6CB1A0D1650292200D1A257 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D6CB1A111650292200D1A257 /* UniversalHangman-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UniversalHangman-Info.plist"; sourceTree = "<group>"; };
+		D6CB1A131650292200D1A257 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D6CB1A151650292200D1A257 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D6CB1A171650292200D1A257 /* UniversalHangman-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniversalHangman-Prefix.pch"; sourceTree = "<group>"; };
+		D6CB1A181650292200D1A257 /* LJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJAppDelegate.h; sourceTree = "<group>"; };
+		D6CB1A191650292200D1A257 /* LJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJAppDelegate.m; sourceTree = "<group>"; };
+		D6CB1A1B1650292200D1A257 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D6CB1A1D1650292200D1A257 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D6CB1A1F1650292200D1A257 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D6CB1A211650292200D1A257 /* LJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJViewController.h; sourceTree = "<group>"; };
+		D6CB1A221650292200D1A257 /* LJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJViewController.m; sourceTree = "<group>"; };
+		D6CB1A251650292200D1A257 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LJViewController_iPhone.xib; sourceTree = "<group>"; };
+		D6CB1A281650292200D1A257 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LJViewController_iPad.xib; sourceTree = "<group>"; };
+		D6D5DEEC165B279400C8015A /* WordLookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordLookupViewController.m; sourceTree = "<group>"; };
+		D6D5DEED165B279400C8015A /* WordLookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordLookupViewController.h; sourceTree = "<group>"; };
+		D6D5DEEE165B279400C8015A /* WordLookupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordLookupViewController.xib; sourceTree = "<group>"; };
+		D6D5DEF2165B27C300C8015A /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		D6D5DEF3165B27C300C8015A /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		D6D5DEF4165B27C300C8015A /* FlipsideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+		D6D5DEF7165B27D300C8015A /* EquivalenceClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquivalenceClass.h; sourceTree = "<group>"; };
+		D6D5DEF8165B27D300C8015A /* EquivalenceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquivalenceClass.m; sourceTree = "<group>"; };
+		D6D5DEFA165B27E100C8015A /* MainView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView_iPad.xib; sourceTree = "<group>"; };
+		D6D5DEFC165B27EE00C8015A /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D6D5DEFE165B27FE00C8015A /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		D6D5DEFF165B27FE00C8015A /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		D6D5DF00165B27FE00C8015A /* Icon~iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~iPad@2x.png"; sourceTree = "<group>"; };
+		D6D5DF01165B27FE00C8015A /* Icon~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~iPad.png"; sourceTree = "<group>"; };
+		D6D5DF02165B27FE00C8015A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D6D5DF03165B27FE00C8015A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D6D5DF04165B27FE00C8015A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D6D5DF05165B27FE00C8015A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6CB1A021650292200D1A257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CB1A0A1650292200D1A257 /* UIKit.framework in Frameworks */,
+				D6CB1A0C1650292200D1A257 /* Foundation.framework in Frameworks */,
+				D6CB1A0E1650292200D1A257 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6CB19FA1650292200D1A257 = {
+			isa = PBXGroup;
+			children = (
+				D6D5DEFE165B27FE00C8015A /* Default-Portrait@2x~ipad.png */,
+				D6D5DEFF165B27FE00C8015A /* Default-Portrait~ipad.png */,
+				D6D5DF00165B27FE00C8015A /* Icon~iPad@2x.png */,
+				D6D5DF01165B27FE00C8015A /* Icon~iPad.png */,
+				D6D5DF02165B27FE00C8015A /* Icon@2x.png */,
+				D6D5DF03165B27FE00C8015A /* Icon.png */,
+				D6D5DF04165B27FE00C8015A /* Default.png */,
+				D6D5DF05165B27FE00C8015A /* Default@2x.png */,
+				D6CB1A0F1650292200D1A257 /* UniversalHangman */,
+				D6CB1A081650292200D1A257 /* Frameworks */,
+				D6CB1A061650292200D1A257 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6CB1A061650292200D1A257 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB1A051650292200D1A257 /* UniversalHangman.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6CB1A081650292200D1A257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB1A091650292200D1A257 /* UIKit.framework */,
+				D6CB1A0B1650292200D1A257 /* Foundation.framework */,
+				D6CB1A0D1650292200D1A257 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6CB1A0F1650292200D1A257 /* UniversalHangman */ = {
+			isa = PBXGroup;
+			children = (
+				D6D5DEF7165B27D300C8015A /* EquivalenceClass.h */,
+				D6D5DEF8165B27D300C8015A /* EquivalenceClass.m */,
+				D6D5DEEC165B279400C8015A /* WordLookupViewController.m */,
+				D6D5DEED165B279400C8015A /* WordLookupViewController.h */,
+				D6D5DEEE165B279400C8015A /* WordLookupViewController.xib */,
+				D6CB1A181650292200D1A257 /* LJAppDelegate.h */,
+				D6CB1A191650292200D1A257 /* LJAppDelegate.m */,
+				D6CB1A211650292200D1A257 /* LJViewController.h */,
+				D6CB1A221650292200D1A257 /* LJViewController.m */,
+				D6CB1A241650292200D1A257 /* LJViewController_iPhone.xib */,
+				D6CB1A271650292200D1A257 /* LJViewController_iPad.xib */,
+				D6D5DEF2165B27C300C8015A /* FlipsideViewController.h */,
+				D6D5DEF3165B27C300C8015A /* FlipsideViewController.m */,
+				D6D5DEFC165B27EE00C8015A /* MainView.xib */,
+				D6D5DEF4165B27C300C8015A /* FlipsideView.xib */,
+				D6D5DEFA165B27E100C8015A /* MainView_iPad.xib */,
+				D6CB1A101650292200D1A257 /* Supporting Files */,
+			);
+			path = UniversalHangman;
+			sourceTree = "<group>";
+		};
+		D6CB1A101650292200D1A257 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB1A111650292200D1A257 /* UniversalHangman-Info.plist */,
+				D6CB1A121650292200D1A257 /* InfoPlist.strings */,
+				D6CB1A151650292200D1A257 /* main.m */,
+				D6CB1A171650292200D1A257 /* UniversalHangman-Prefix.pch */,
+				D6CB1A1B1650292200D1A257 /* Default.png */,
+				D6CB1A1D1650292200D1A257 /* Default@2x.png */,
+				D6CB1A1F1650292200D1A257 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6CB1A041650292200D1A257 /* UniversalHangman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6CB1A2C1650292200D1A257 /* Build configuration list for PBXNativeTarget "UniversalHangman" */;
+			buildPhases = (
+				D6CB1A011650292200D1A257 /* Sources */,
+				D6CB1A021650292200D1A257 /* Frameworks */,
+				D6CB1A031650292200D1A257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UniversalHangman;
+			productName = UniversalHangman;
+			productReference = D6CB1A051650292200D1A257 /* UniversalHangman.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6CB19FC1650292200D1A257 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LJ;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = LJApps;
+			};
+			buildConfigurationList = D6CB19FF1650292200D1A257 /* Build configuration list for PBXProject "UniversalHangman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D6CB19FA1650292200D1A257;
+			productRefGroup = D6CB1A061650292200D1A257 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6CB1A041650292200D1A257 /* UniversalHangman */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6CB1A031650292200D1A257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CB1A141650292200D1A257 /* InfoPlist.strings in Resources */,
+				D6CB1A1C1650292200D1A257 /* Default.png in Resources */,
+				D6CB1A1E1650292200D1A257 /* Default@2x.png in Resources */,
+				D6CB1A201650292200D1A257 /* Default-568h@2x.png in Resources */,
+				D6CB1A261650292200D1A257 /* LJViewController_iPhone.xib in Resources */,
+				D6CB1A291650292200D1A257 /* LJViewController_iPad.xib in Resources */,
+				D6D5DEF0165B279400C8015A /* WordLookupViewController.xib in Resources */,
+				D6D5DEF6165B27C300C8015A /* FlipsideView.xib in Resources */,
+				D6D5DEFB165B27E100C8015A /* MainView_iPad.xib in Resources */,
+				D6D5DEFD165B27EE00C8015A /* MainView.xib in Resources */,
+				D6D5DF06165B27FE00C8015A /* Default-Portrait@2x~ipad.png in Resources */,
+				D6D5DF07165B27FE00C8015A /* Default-Portrait~ipad.png in Resources */,
+				D6D5DF08165B27FE00C8015A /* Icon~iPad@2x.png in Resources */,
+				D6D5DF09165B27FE00C8015A /* Icon~iPad.png in Resources */,
+				D6D5DF0A165B27FE00C8015A /* Icon@2x.png in Resources */,
+				D6D5DF0B165B27FE00C8015A /* Icon.png in Resources */,
+				D6D5DF0C165B27FE00C8015A /* Default.png in Resources */,
+				D6D5DF0D165B27FE00C8015A /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6CB1A011650292200D1A257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6CB1A161650292200D1A257 /* main.m in Sources */,
+				D6CB1A1A1650292200D1A257 /* LJAppDelegate.m in Sources */,
+				D6CB1A231650292200D1A257 /* LJViewController.m in Sources */,
+				D6D5DEEF165B279400C8015A /* WordLookupViewController.m in Sources */,
+				D6D5DEF5165B27C300C8015A /* FlipsideViewController.m in Sources */,
+				D6D5DEF9165B27D300C8015A /* EquivalenceClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D6CB1A121650292200D1A257 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6CB1A131650292200D1A257 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D6CB1A241650292200D1A257 /* LJViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6CB1A251650292200D1A257 /* en */,
+			);
+			name = LJViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		D6CB1A271650292200D1A257 /* LJViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6CB1A281650292200D1A257 /* en */,
+			);
+			name = LJViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6CB1A2A1650292200D1A257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6CB1A2B1650292200D1A257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6CB1A2D1650292200D1A257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UniversalHangman/UniversalHangman-Prefix.pch";
+				INFOPLIST_FILE = "UniversalHangman/UniversalHangman-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D6CB1A2E1650292200D1A257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UniversalHangman/UniversalHangman-Prefix.pch";
+				INFOPLIST_FILE = "UniversalHangman/UniversalHangman-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6CB19FF1650292200D1A257 /* Build configuration list for PBXProject "UniversalHangman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6CB1A2A1650292200D1A257 /* Debug */,
+				D6CB1A2B1650292200D1A257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6CB1A2C1650292200D1A257 /* Build configuration list for PBXNativeTarget "UniversalHangman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6CB1A2D1650292200D1A257 /* Debug */,
+				D6CB1A2E1650292200D1A257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6CB19FC1650292200D1A257 /* Project object */;
+}
