@@ -68,11 +68,7 @@
 
 - (IBAction)newGame
 {
-    //    NSLog(@"Enter MainViewController newGame");
-    
-    // hide the label to tell the user to start a new game
-    //    self.newGameLabel.hidden = YES;
-    
+        
     // update the directions
     self.directionsLabel.text = NSLocalizedString(@"DIRECTION", @"Enter a letter to guess the word");
     self.directionsLabel.textColor = [UIColor whiteColor];
@@ -85,10 +81,6 @@
     self.isEvil = [defaults boolForKey:@"isEvil"];
     
     self.navBar.topItem.title = (self.isEvil)?@"Evil Hangman":@"Hangman";
-    
-    // log the default settings
-    //    NSLog(@"MainViewController Number of guesses left: %i", self.guessesLeft);
-    //    NSLog(@"MainViewController Number of letters: %i", self.numLetters);
     
     self.equivalenceClass = [[EquivalenceClass alloc] init];
     self.equivalenceClass.evil = self.isEvil;
@@ -299,7 +291,8 @@
         [self.settingPopover dismissPopoverAnimated:YES];
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
+//        [self dismissModalViewControllerAnimated:YES];
     }
     // We need to refresh the screen
     [self newGame];
@@ -323,7 +316,8 @@
         [self.settingPopover dismissPopoverAnimated:YES];
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
+//        [self dismissModalViewControllerAnimated:YES];
     }
     
 }
@@ -341,7 +335,8 @@
         
     } else if (UIUserInterfaceIdiomPhone){
         controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentModalViewController:controller animated:YES];
+        [self presentViewController:controller animated:YES completion:nil];
+        
     }
     
 }
@@ -359,7 +354,8 @@
         //        self.settingPopover.popoverContentSize=CGSizeMake(320.0, 460.0);
     } else if (UIUserInterfaceIdiomPhone){
         wlvc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentModalViewController:wlvc animated:YES];
+        [self presentViewController:wlvc animated:YES completion:nil];
+       
     }
 }
 

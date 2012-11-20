@@ -189,7 +189,8 @@ static int MAX_NUM_LETTERS = 26;
    
     WordLookupViewController *lookup = [[WordLookupViewController alloc] initWithNibName:nil bundle:nil];
     lookup.delegate = self;
-    [self presentModalViewController:lookup animated:YES];
+    [self presentViewController:lookup animated:YES completion:nil];
+//    [self presentModalViewController:lookup animated:YES];
     
 }
 
@@ -197,7 +198,8 @@ static int MAX_NUM_LETTERS = 26;
 #pragma mark - Delegate method
 - (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
 {
-   [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+//   [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
