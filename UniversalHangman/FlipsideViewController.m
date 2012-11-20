@@ -8,7 +8,7 @@
 //
 
 #import "FlipsideViewController.h"
-
+#import "RootViewController.h"
 
 @implementation FlipsideViewController
 
@@ -190,10 +190,15 @@ static int MAX_NUM_LETTERS = 26;
     WordLookupViewController *lookup = [[WordLookupViewController alloc] initWithNibName:nil bundle:nil];
     lookup.delegate = self;
     [self presentViewController:lookup animated:YES completion:nil];
-//    [self presentModalViewController:lookup animated:YES];
-    
 }
 
+- (IBAction)removeAds:(id)sender
+{
+    RootViewController *inApp = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:inApp];
+    [self presentViewController:navController animated:YES completion:nil];
+    
+}
 
 #pragma mark - Delegate method
 - (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller

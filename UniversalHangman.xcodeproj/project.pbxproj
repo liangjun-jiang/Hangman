@@ -55,10 +55,15 @@
 		D6D5DF45165B2C8C00C8015A /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF43165B2C8C00C8015A /* words.plist */; };
 		D6D5DF46165B2C8C00C8015A /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF44165B2C8C00C8015A /* defaults.plist */; };
 		D6D5DF48165B2DCF00C8015A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF47165B2DCF00C8015A /* Localizable.strings */; };
+		D6D5DF51165B30E300C8015A /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF4E165B30E200C8015A /* IAPHelper.m */; };
+		D6D5DF52165B30E300C8015A /* InAppRageIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF50165B30E300C8015A /* InAppRageIAPHelper.m */; };
+		D6D5DF57165B30FB00C8015A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF54165B30FB00C8015A /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6D5DF58165B30FB00C8015A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF56165B30FB00C8015A /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D6D5DF5B165B340700C8015A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF5A165B340700C8015A /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D6CB1A051650292200D1A257 /* UniversalHangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalHangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6CB1A051650292200D1A257 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CB1A091650292200D1A257 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6CB1A0B1650292200D1A257 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D6CB1A0D1650292200D1A257 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +123,16 @@
 		D6D5DF43165B2C8C00C8015A /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		D6D5DF44165B2C8C00C8015A /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		D6D5DF47165B2DCF00C8015A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D6D5DF4D165B30E200C8015A /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		D6D5DF4E165B30E200C8015A /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		D6D5DF4F165B30E300C8015A /* InAppRageIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppRageIAPHelper.h; sourceTree = "<group>"; };
+		D6D5DF50165B30E300C8015A /* InAppRageIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppRageIAPHelper.m; sourceTree = "<group>"; };
+		D6D5DF53165B30FB00C8015A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D6D5DF54165B30FB00C8015A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D6D5DF55165B30FB00C8015A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		D6D5DF56165B30FB00C8015A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D6D5DF59165B340700C8015A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		D6D5DF5A165B340700C8015A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +180,7 @@
 		D6CB1A061650292200D1A257 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6CB1A051650292200D1A257 /* UniversalHangman.app */,
+				D6CB1A051650292200D1A257 /* Hangman.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +205,16 @@
 		D6CB1A0F1650292200D1A257 /* UniversalHangman */ = {
 			isa = PBXGroup;
 			children = (
+				D6D5DF59165B340700C8015A /* RootViewController.h */,
+				D6D5DF5A165B340700C8015A /* RootViewController.m */,
+				D6D5DF53165B30FB00C8015A /* MBProgressHUD.h */,
+				D6D5DF54165B30FB00C8015A /* MBProgressHUD.m */,
+				D6D5DF55165B30FB00C8015A /* Reachability.h */,
+				D6D5DF56165B30FB00C8015A /* Reachability.m */,
+				D6D5DF4D165B30E200C8015A /* IAPHelper.h */,
+				D6D5DF4E165B30E200C8015A /* IAPHelper.m */,
+				D6D5DF4F165B30E300C8015A /* InAppRageIAPHelper.h */,
+				D6D5DF50165B30E300C8015A /* InAppRageIAPHelper.m */,
 				D6D5DF1A165B295300C8015A /* GameKitHelper.m */,
 				D6D5DF1B165B295300C8015A /* GameConstants.h */,
 				D6D5DF1C165B295300C8015A /* GameKitHelper.h */,
@@ -274,7 +299,7 @@
 			);
 			name = UniversalHangman;
 			productName = UniversalHangman;
-			productReference = D6CB1A051650292200D1A257 /* UniversalHangman.app */;
+			productReference = D6CB1A051650292200D1A257 /* Hangman.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -355,6 +380,11 @@
 				D6D5DEF9165B27D300C8015A /* EquivalenceClass.m in Sources */,
 				D6D5DF16165B291D00C8015A /* EasyTracker.m in Sources */,
 				D6D5DF1D165B295300C8015A /* GameKitHelper.m in Sources */,
+				D6D5DF51165B30E300C8015A /* IAPHelper.m in Sources */,
+				D6D5DF52165B30E300C8015A /* InAppRageIAPHelper.m in Sources */,
+				D6D5DF57165B30FB00C8015A /* MBProgressHUD.m in Sources */,
+				D6D5DF58165B30FB00C8015A /* Reachability.m in Sources */,
+				D6D5DF5B165B340700C8015A /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +479,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ThirdParty/GA\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hangman;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -464,7 +494,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ThirdParty/GA\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Hangman;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

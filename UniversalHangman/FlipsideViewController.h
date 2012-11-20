@@ -32,6 +32,7 @@
 - (IBAction)numGuessesChanged:(id)sender;
 - (IBAction)gameTypeChanged:(id)sender;
 - (IBAction)showEvil:(id)sender;
+- (IBAction)removeAds:(id)sender;
 @end
 
 
