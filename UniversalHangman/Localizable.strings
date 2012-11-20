@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Hangman
+
+ Created by Janet Liu on 8/8/11.
+ Harvard Summer School 2011
+ CS S-76 Building Mobile Applications
+ 
+*/
+"DIRECTION" = "Enter a letter to guess the word";
+"LETTERS_GUESSED" = "Letters guessed";
+"GUESSES_LEFT" = "Number of guesses left";
+"NUMBER_LETTERS" = "Number of letters";
+"NUMBER_GUESSES" = "Number of guesses";
+"LOSE" = "The correct word is displayed below";
+"WIN" = "You win!!!!";
+"NEWGAME" = "Press the New Game button to start again!";
+"INVALIDINPUT" = "Please enter a letter a-z or A-Z";
+"DUPLICATE" = "You already guessed the letter";
+"OK" = "Ok";
+"MIN_GUESSES" = "The number of guesses must be at least the number of letters.";
+"NO_LENGTH" = "There are no words with the given length. Please pick another length.";
+"HANGMAN" = "Hangman";
+"HANGMANSETTINGS" = "Hangman Settings";

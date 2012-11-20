@@ -180,7 +180,7 @@
             [valuesArray addObject:item];
             [dict setObject:valuesArray forKey:key];
             //NSLog(@"Values array count %d, created", valuesArray.count);
-            [valuesArray release];
+           
         }
         else
         {
@@ -197,7 +197,7 @@
             // clear any old arrays of the largest equivalence classes, and start a new array
             if (largestKeysArray == nil)
             {
-                [largestKeysArray release];
+//                [largestKeysArray release];
                 largestKeysArray = [[NSMutableArray alloc] init];
             }
             [largestKeysArray addObject:key];
@@ -218,7 +218,7 @@
     largestKey = [largestKeysArray objectAtIndex:randomIndex];
     
     // don't need this anymore
-    [largestKeysArray release];
+//    [largestKeysArray release];
     
     // find out the largest equivalence class
 //    NSLog(@"The largest equivalence class is %@, with %d words", largestKey, largest);
@@ -238,7 +238,7 @@
     self.words = [dict objectForKey:largestKey];
     
     // done with the other words
-    [dict release];
+//    [dict release];
     
     self.word = largestKey;
     
@@ -285,11 +285,5 @@
     
 }
 
-- (void)dealloc
-{
-    [self.words release];
-    [self.wordsByLengthDictionary release];
-    [super dealloc];
-}
 
 @end

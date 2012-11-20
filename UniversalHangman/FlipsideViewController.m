@@ -26,10 +26,7 @@ static int MAX_NUM_GUESSES = 26;
 static int MIN_NUM_LETTERS = 1;
 static int MAX_NUM_LETTERS = 26;
 
-- (void)dealloc
-{
-    [super dealloc];
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -123,7 +120,7 @@ static int MAX_NUM_LETTERS = 26;
                                             cancelButtonTitle: NSLocalizedString(@"OK", @"ok")  
                                             otherButtonTitles: nil];
         [msg show];
-        [msg release];
+//        [msg release];
         return;
     }
     
@@ -141,7 +138,8 @@ static int MAX_NUM_LETTERS = 26;
                                             cancelButtonTitle: NSLocalizedString(@"OK", @"ok") 
                                             otherButtonTitles: nil];
         [msg show];
-        [msg release];        return;
+//        [msg release];
+        return;
     }
         
     // save settings

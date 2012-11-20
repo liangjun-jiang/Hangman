@@ -41,7 +41,7 @@
     
     self = [super initWithNibName:@"WordLookupViewController"  bundle:nil];
     if (self){
-        self.word = [mWord retain];
+        self.word = mWord;
     }
     
     return self;
@@ -101,9 +101,5 @@
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-    
-}
 
 @end
