@@ -8,7 +8,7 @@
 //
 
 #import "FlipsideViewController.h"
-#import "RootViewController.h"
+#import "MasterViewController.h"
 
 @implementation FlipsideViewController
 
@@ -194,7 +194,7 @@ static int MAX_NUM_LETTERS = 26;
 
 - (IBAction)removeAds:(id)sender
 {
-    RootViewController *inApp = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+    MasterViewController *inApp = [[MasterViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:inApp];
     [self presentViewController:navController animated:YES completion:nil];
     

@@ -333,7 +333,7 @@
         //        self.settingPopover.popoverContentSize=CGSizeMake(320.0, 460.0);
         [self.settingPopover presentPopoverFromBarButtonItem:sender  permittedArrowDirections:UIPopoverArrowDirectionRight animated:YES];
         
-    } else if (UIUserInterfaceIdiomPhone){
+    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
         controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:controller animated:YES completion:nil];
         
@@ -352,7 +352,7 @@
         [self.settingPopover presentPopoverFromRect:self.hintButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionRight animated:YES];
         
         //        self.settingPopover.popoverContentSize=CGSizeMake(320.0, 460.0);
-    } else if (UIUserInterfaceIdiomPhone){
+    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
         wlvc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:wlvc animated:YES completion:nil];
        

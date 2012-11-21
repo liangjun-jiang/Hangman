@@ -29,8 +29,6 @@
 		D6D5DF09165B27FE00C8015A /* Icon~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF01165B27FE00C8015A /* Icon~iPad.png */; };
 		D6D5DF0A165B27FE00C8015A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF02165B27FE00C8015A /* Icon@2x.png */; };
 		D6D5DF0B165B27FE00C8015A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF03165B27FE00C8015A /* Icon.png */; };
-		D6D5DF0C165B27FE00C8015A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF04165B27FE00C8015A /* Default.png */; };
-		D6D5DF0D165B27FE00C8015A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF05165B27FE00C8015A /* Default@2x.png */; };
 		D6D5DF16165B291D00C8015A /* EasyTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF11165B291D00C8015A /* EasyTracker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D6D5DF17165B291D00C8015A /* EasyTracker.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF12165B291D00C8015A /* EasyTracker.plist */; };
 		D6D5DF18165B291D00C8015A /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D5DF14165B291D00C8015A /* libGoogleAnalytics.a */; };
@@ -56,10 +54,8 @@
 		D6D5DF46165B2C8C00C8015A /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF44165B2C8C00C8015A /* defaults.plist */; };
 		D6D5DF48165B2DCF00C8015A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF47165B2DCF00C8015A /* Localizable.strings */; };
 		D6D5DF51165B30E300C8015A /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF4E165B30E200C8015A /* IAPHelper.m */; };
-		D6D5DF52165B30E300C8015A /* InAppRageIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF50165B30E300C8015A /* InAppRageIAPHelper.m */; };
-		D6D5DF57165B30FB00C8015A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF54165B30FB00C8015A /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D6D5DF58165B30FB00C8015A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF56165B30FB00C8015A /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D6D5DF5B165B340700C8015A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF5A165B340700C8015A /* RootViewController.m */; };
+		D6D5DF67165C791000C8015A /* RageIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF66165C791000C8015A /* RageIAPHelper.m */; };
+		D6D5DF6A165C797D00C8015A /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF69165C797D00C8015A /* MasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,14 +121,10 @@
 		D6D5DF47165B2DCF00C8015A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D6D5DF4D165B30E200C8015A /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
 		D6D5DF4E165B30E200C8015A /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
-		D6D5DF4F165B30E300C8015A /* InAppRageIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppRageIAPHelper.h; sourceTree = "<group>"; };
-		D6D5DF50165B30E300C8015A /* InAppRageIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppRageIAPHelper.m; sourceTree = "<group>"; };
-		D6D5DF53165B30FB00C8015A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		D6D5DF54165B30FB00C8015A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		D6D5DF55165B30FB00C8015A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		D6D5DF56165B30FB00C8015A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		D6D5DF59165B340700C8015A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		D6D5DF5A165B340700C8015A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		D6D5DF65165C791000C8015A /* RageIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RageIAPHelper.h; sourceTree = "<group>"; };
+		D6D5DF66165C791000C8015A /* RageIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RageIAPHelper.m; sourceTree = "<group>"; };
+		D6D5DF68165C797D00C8015A /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		D6D5DF69165C797D00C8015A /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,16 +197,12 @@
 		D6CB1A0F1650292200D1A257 /* UniversalHangman */ = {
 			isa = PBXGroup;
 			children = (
-				D6D5DF59165B340700C8015A /* RootViewController.h */,
-				D6D5DF5A165B340700C8015A /* RootViewController.m */,
-				D6D5DF53165B30FB00C8015A /* MBProgressHUD.h */,
-				D6D5DF54165B30FB00C8015A /* MBProgressHUD.m */,
-				D6D5DF55165B30FB00C8015A /* Reachability.h */,
-				D6D5DF56165B30FB00C8015A /* Reachability.m */,
+				D6D5DF68165C797D00C8015A /* MasterViewController.h */,
+				D6D5DF69165C797D00C8015A /* MasterViewController.m */,
+				D6D5DF65165C791000C8015A /* RageIAPHelper.h */,
+				D6D5DF66165C791000C8015A /* RageIAPHelper.m */,
 				D6D5DF4D165B30E200C8015A /* IAPHelper.h */,
 				D6D5DF4E165B30E200C8015A /* IAPHelper.m */,
-				D6D5DF4F165B30E300C8015A /* InAppRageIAPHelper.h */,
-				D6D5DF50165B30E300C8015A /* InAppRageIAPHelper.m */,
 				D6D5DF1A165B295300C8015A /* GameKitHelper.m */,
 				D6D5DF1B165B295300C8015A /* GameConstants.h */,
 				D6D5DF1C165B295300C8015A /* GameKitHelper.h */,
@@ -347,8 +335,6 @@
 				D6D5DF09165B27FE00C8015A /* Icon~iPad.png in Resources */,
 				D6D5DF0A165B27FE00C8015A /* Icon@2x.png in Resources */,
 				D6D5DF0B165B27FE00C8015A /* Icon.png in Resources */,
-				D6D5DF0C165B27FE00C8015A /* Default.png in Resources */,
-				D6D5DF0D165B27FE00C8015A /* Default@2x.png in Resources */,
 				D6D5DF17165B291D00C8015A /* EasyTracker.plist in Resources */,
 				D6D5DF24165B2A3700C8015A /* Default-568h@2x.png in Resources */,
 				D6D5DF3B165B2C7800C8015A /* blackboard_1920.png in Resources */,
@@ -381,10 +367,8 @@
 				D6D5DF16165B291D00C8015A /* EasyTracker.m in Sources */,
 				D6D5DF1D165B295300C8015A /* GameKitHelper.m in Sources */,
 				D6D5DF51165B30E300C8015A /* IAPHelper.m in Sources */,
-				D6D5DF52165B30E300C8015A /* InAppRageIAPHelper.m in Sources */,
-				D6D5DF57165B30FB00C8015A /* MBProgressHUD.m in Sources */,
-				D6D5DF58165B30FB00C8015A /* Reachability.m in Sources */,
-				D6D5DF5B165B340700C8015A /* RootViewController.m in Sources */,
+				D6D5DF67165C791000C8015A /* RageIAPHelper.m in Sources */,
+				D6D5DF6A165C797D00C8015A /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +463,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ThirdParty/GA\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Hangman;
 				WRAPPER_EXTENSION = app;
 			};
@@ -494,6 +479,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/ThirdParty/GA\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Hangman;
 				WRAPPER_EXTENSION = app;
 			};

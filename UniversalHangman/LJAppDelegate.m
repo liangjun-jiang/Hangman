@@ -9,7 +9,7 @@
 #import "LJAppDelegate.h"
 
 #import "LJViewController.h"
-#import "InAppRageIAPHelper.h"
+#import "RageIAPHelper.h"
 @implementation LJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -17,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // Override point for customization after application launch.
-    [[SKPaymentQueue defaultQueue] addTransactionObserver:[InAppRageIAPHelper sharedHelper]];
+    [RageIAPHelper sharedInstance];
     
     [self customApperance];
     // from Tom Barrasso on help bulletin board

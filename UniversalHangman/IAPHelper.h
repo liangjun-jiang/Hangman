@@ -6,27 +6,18 @@
 //  Copyright 2011 Ray Wenderlich. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "StoreKit/StoreKit.h"
+#import <StoreKit/StoreKit.h>
 
-#define kProductsLoadedNotification         @"ProductsLoaded"
-#define kProductPurchasedNotification       @"ProductPurchased"
-#define kProductPurchaseFailedNotification  @"ProductPurchaseFailed"
+UIKIT_EXTERN NSString *const IAPHelperProductPurchasedNotification;
 
-@interface IAPHelper : NSObject <SKProductsRequestDelegate, SKPaymentTransactionObserver> {
-    NSSet * _productIdentifiers;    
-    NSArray * _products;
-    NSMutableSet * _purchasedProducts;
-    SKProductsRequest * _request;
-}
+typedef void (^RequestProductsCompletionHandler)(BOOL success, NSArray * products);
 
-@property (retain) NSSet *productIdentifiers;
-@property (retain) NSArray * products;
-@property (retain) NSMutableSet *purchasedProducts;
-@property (retain) SKProductsRequest *request;
+@interface IAPHelper : NSObject
 
-- (void)requestProducts;
 - (id)initWithProductIdentifiers:(NSSet *)productIdentifiers;
-- (void)buyProductIdentifier:(NSString *)productIdentifier;
+- (void)requestProductsWithCompletionHandler:(RequestProductsCompletionHandler)completionHandler;
+- (void)buyProduct:(SKProduct *)product;
+- (BOOL)productPurchased:(NSString *)productIdentifier;
+- (void)restoreCompletedTransactions;
 
 @end
