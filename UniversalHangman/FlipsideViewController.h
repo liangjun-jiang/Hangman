@@ -24,6 +24,7 @@
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) IBOutlet UISwitch *evilSwitch;
 @property (nonatomic, retain) IBOutlet UILabel *instructionLabel;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *noAdsItem;
 
 
 

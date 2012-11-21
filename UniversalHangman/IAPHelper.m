@@ -124,6 +124,10 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 - (void)completeTransaction:(SKPaymentTransaction *)transaction {
     NSLog(@"completeTransaction...");
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"PURCHASED"];
+    [defaults synchronize];
+    
     [self provideContentForProductIdentifier:transaction.payment.productIdentifier];
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }

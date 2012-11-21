@@ -62,8 +62,12 @@
     
     
     // ads
-    self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0, 44.0, self.view.frame.size.width, 44.0)];
-    self.bannerView.delegate = self;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults boolForKey:@"PURCHASED"]) {
+        self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0, 44.0, self.view.frame.size.width, 44.0)];
+        self.bannerView.delegate = self;
+    }
+    
 }
 
 - (IBAction)newGame

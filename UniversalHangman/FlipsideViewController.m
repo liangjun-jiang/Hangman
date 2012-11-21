@@ -20,6 +20,7 @@
 @synthesize navBar=_navBar;
 @synthesize evilSwitch = _evilSwitch;
 @synthesize instructionLabel = _instructionLabel;
+@synthesize noAdsItem;
 
 static int MIN_NUM_GUESSES = 1;
 static int MAX_NUM_GUESSES = 26;
@@ -48,7 +49,11 @@ static int MAX_NUM_LETTERS = 26;
     
 //    CGSize size = CGSizeMake(320.0,460.0);
 //    self.contentSizeForViewInPopover = size;
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults boolForKey:@"PURCHASED"]) {
+        NSLog(@"not purchased");
+        self.noAdsItem = nil;
+    }
     
     // set the slider min and max values
     self.guessesSlider.minimumValue = MIN_NUM_GUESSES;
@@ -58,7 +63,7 @@ static int MAX_NUM_LETTERS = 26;
     self.lettersSlider.maximumValue = MAX_NUM_LETTERS;
     
     // try to set the min and max length of words if no such words exist at the edges
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int minLetters = [[defaults objectForKey:@"minLetters"] intValue];
     int maxLetters = [[defaults objectForKey:@"maxLetters"] intValue];
     BOOL isEvil = [defaults boolForKey:@"isEvil"];
