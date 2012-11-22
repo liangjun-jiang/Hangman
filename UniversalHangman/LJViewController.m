@@ -17,7 +17,7 @@
 @end
 
 @implementation LJViewController
-
+@synthesize player;
 
 @synthesize directionsLabel=_directionsLabel;
 @synthesize wordLabel=_wordLabel;
@@ -32,15 +32,13 @@
 @synthesize hintButton = _hintButton;
 @synthesize bannerView = _bannerView;
 @synthesize settingPopover;
+@synthesize gameCenterButton;
 
 
 // init
 - (void)initDict
 {
-    //    NSLog(@"Enter MainViewController initDict");
     self.equivalenceClass = [[EquivalenceClass alloc] init];
-    //    NSLog(@"Exit MainViewController initDict");
-    
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -49,7 +47,6 @@
     [super viewWillAppear:animated];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if (![defaults boolForKey:@"PURCHASED"]) {
-//        NSLog(@"not purchased!");
         self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0, 44.0, self.view.frame.size.width, 44.0)];
         self.bannerView.delegate = self;
     }
@@ -65,7 +62,7 @@
     
     
     //bring up the GameCenter
-    [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
+//    [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
     
     
     [self newGame];
@@ -117,6 +114,8 @@
     
     self.hintButton.hidden = YES;
     self.hintButton.highlighted = NO;
+    
+    self.gameCenterButton.hidden = YES;
     
     [self enableButtons:YES];
     
@@ -267,8 +266,14 @@
     self.hintButton.hidden = NO;
     self.hintButton.highlighted = YES;
     
+    self.gameCenterButton.hidden = NO;
+    self.gameCenterButton.highlighted = YES;
+    
     // post to game center
-    [self postToGameCenter];
+    
+//    [self showLeaderboard];
+    
+//    [self postToGameCenter];
 }
 
 // method to perform when the user runs out of guesses
@@ -302,7 +307,6 @@
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
-//        [self dismissModalViewControllerAnimated:YES];
     }
     // We need to refresh the screen
     [self newGame];
@@ -384,16 +388,16 @@
 
 #define kEasyLeaderboardID @"Leaderboard"
 
-- (IBAction)postToGameCenter:(id)sender{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
-    
-    GameKitHelper *gameKitHelper = [GameKitHelper sharedGameKitHelper];
-    gameKitHelper.delegate = self;
-    [gameKitHelper submitScore:score category:kEasyLeaderboardID];
-    
-}
+//- (IBAction)postToGameCenter:(id)sender{
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    
+//    float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
+//    
+//    GameKitHelper *gameKitHelper = [GameKitHelper sharedGameKitHelper];
+//    gameKitHelper.delegate = self;
+//    [gameKitHelper submitScore:score category:kEasyLeaderboardID];
+//    
+//}
 
 
 
@@ -453,12 +457,7 @@
             }
         }
         
-        //    self.gameCenterController = [[GameCenterController alloc] initWithScore:(int)(self.isEvil)?10000*score:100*score];
-        //        self.gameCenterController = [[GameCenterController alloc] initWithNibName:nil bundle:nil];
-        //        self.gameCenterController.delegate = self;
-        //        self.gameCenterController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        //        [self presentModalViewController:self.gameCenterController animated:YES];
-    } else
+        } else
         NSLog(@"Oops");
 }
 
@@ -503,6 +502,66 @@
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner
 {
     
+}
+
+#pragma mark - Leaderboard method
+- (IBAction)showLeaderboardButtonAction:(id)event 
+{
+//    NSString * leaderboardCategory = @"com.appledts.GameCenterSampleApps.leaderboard.seconds";
+    NSString * leaderboardCategory = @"com.ljsportapps.hangman.leaderboard";
+    
+    // The intent here is to show the leaderboard and then submit a score. If we try to submit the score first there is no guarentee
+    // the server will have recieved the score when retreiving the current list
+    [self showLeaderboard:leaderboardCategory];
+    [self insertCurrentTimeIntoLeaderboard:leaderboardCategory];
+}
+
+#pragma mark -
+#pragma mark Example of a score to be inserted
+
+// Using time as as an int of seconds from 1970 gives us a good rolling number to test against
+- (void)insertCurrentTimeIntoLeaderboard:(NSString*)leaderboard
+{
+//    NSDate *today = [NSDate date];
+//    int64_t score = [today timeIntervalSince1970];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
+    int64_t finalScore =  (int64_t)(self.isEvil)?10000*score:100*score;
+    GKScore * submitScore = [[GKScore alloc] initWithCategory:leaderboard];
+    [submitScore setValue:finalScore];
+    
+    // New feature in iOS5 tells GameCenter which leaderboard is the default per user.
+    // This can be used to show a user's favorite course/track associated leaderboard, or just show the latest score submitted.
+    [submitScore setShouldSetDefaultLeaderboard:YES];
+    
+    // New feature in iOS5 allows you to set the context to which the score was sent. For instance this will set the context to be
+    //the count of the button press per run time. Information stored in context isn't accessable in standard GKLeaderboardViewController,
+    //instead it's accessable from GKLeaderboard's loadScoresWithCompletionHandler:
+    [submitScore setContext:context++];
+    
+    [self.player submitScore:submitScore];
+   
+}
+
+// Example of how to bring up a specific leaderboard
+- (void)showLeaderboard:(NSString *)leaderboard
+{
+    GKLeaderboardViewController * leaderboardViewController = [[GKLeaderboardViewController alloc] init];
+    [leaderboardViewController setCategory:leaderboard];
+    [leaderboardViewController setLeaderboardDelegate:self];
+    [self presentViewController:leaderboardViewController animated:YES completion:nil];
+}
+
+- (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+// Disable GameCenter options from view
+- (void)enableGameCenter:(BOOL)enableGameCenter
+{
+//    [showLeaderboardButton setEnabled:enableGameCenter];
 }
 
 @end
