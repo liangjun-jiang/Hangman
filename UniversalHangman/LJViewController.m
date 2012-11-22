@@ -106,8 +106,8 @@
     self.hintButton.hidden = YES;
     self.hintButton.highlighted = NO;
     
-//    self.gameCenterButton.hidden = YES;
-//    self.gameCenterButton.enabled = NO;
+    self.gameCenterButton.hidden = YES;
+    self.gameCenterButton.enabled = NO;
     [self enableButtons:YES];
     
 }
@@ -248,7 +248,7 @@
 {
     
     // update the directions
-    self.directionsLabel.text = NSLocalizedString(@"WIN", @"You win!!!");
+    self.directionsLabel.text = NSLocalizedString(@"WIN", @"You win! Tap GameCenter to submit your score!");
     self.directionsLabel.textColor = [UIColor orangeColor];
     // We also need to disable those buttons
     [self enableButtons:NO];

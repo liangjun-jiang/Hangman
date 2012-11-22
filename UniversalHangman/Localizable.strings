@@ -13,7 +13,7 @@
 "NUMBER_LETTERS" = "Number of letters";
 "NUMBER_GUESSES" = "Number of guesses";
 "LOSE" = "The correct word is displayed below";
-"WIN" = "You win!!!!";
+"WIN" = "You win!. Tap GameCenter to Submit Your Score.";
 "NEWGAME" = "Press the New Game button to start again!";
 "INVALIDINPUT" = "Please enter a letter a-z or A-Z";
 "DUPLICATE" = "You already guessed the letter";
