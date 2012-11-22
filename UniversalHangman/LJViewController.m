@@ -116,7 +116,7 @@
     self.hintButton.highlighted = NO;
     
     self.gameCenterButton.hidden = YES;
-    
+    self.gameCenterButton.enabled = NO;
     [self enableButtons:YES];
     
 }
@@ -267,13 +267,9 @@
     self.hintButton.highlighted = YES;
     
     self.gameCenterButton.hidden = NO;
-    self.gameCenterButton.highlighted = YES;
+    self.gameCenterButton.enabled = YES;
+//    self.gameCenterButton.highlighted = YES;
     
-    // post to game center
-    
-//    [self showLeaderboard];
-    
-//    [self postToGameCenter];
 }
 
 // method to perform when the user runs out of guesses

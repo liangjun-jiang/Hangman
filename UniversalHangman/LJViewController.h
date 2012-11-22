@@ -44,7 +44,7 @@
 - (void)updateGuessedLettersAndCount;
 - (void)initDict;
 - (void)checkResult;
-- (IBAction)postToGameCenter:(id)sender;
+//- (IBAction)postToGameCenter:(id)sender;
 
 // present the leaderboard as a modal window
 - (void)showLeaderboard:(NSString *)leaderboard ;

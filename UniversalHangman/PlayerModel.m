@@ -69,10 +69,10 @@
 
 - (void)dealloc
 {
-    [storedScores release];
-    [writeLock release];
-    [storedScoresFilename release];   
-    [super dealloc];
+//    [storedScores release];
+//    [writeLock release];
+//    [storedScoresFilename release];   
+//    [super dealloc];
 }
 
 // Attempt to resubmit the scores.

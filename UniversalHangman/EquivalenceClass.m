@@ -120,6 +120,7 @@
     
     if (!self.evil) {
         self.word = [self getTheWord];
+        NSLog(@"the no-evil word: %@",self.word);
     }
 
 }
@@ -221,9 +222,6 @@
 //    NSLog(@"Index %d out of 0 to %d",randomIndex, (largestKeysArray.count-1));
     largestKey = [largestKeysArray objectAtIndex:randomIndex];
     
-    // don't need this anymore
-//    [largestKeysArray release];
-    
     // find out the largest equivalence class
 //    NSLog(@"The largest equivalence class is %@, with %d words", largestKey, largest);
     
@@ -240,9 +238,6 @@
     }
     
     self.words = [dict objectForKey:largestKey];
-    
-    // done with the other words
-//    [dict release];
     
     self.word = largestKey;
     
