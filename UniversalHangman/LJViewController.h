@@ -19,10 +19,8 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *directionsLabel;
 @property (nonatomic, retain) IBOutlet UILabel *wordLabel;
-//@property (nonatomic, retain) IBOutlet UITextField *guessText;
 @property (nonatomic, retain) IBOutlet UILabel *guessedLettersLabel;
 @property (nonatomic, retain) IBOutlet UILabel *remainingGuessesLabel;
-//@property (nonatomic, retain) IBOutlet UILabel *newGameLabel;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) EquivalenceClass *equivalenceClass;
 @property (nonatomic, assign) int guessesLeft;
