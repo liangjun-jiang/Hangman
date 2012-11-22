@@ -486,6 +486,11 @@ static EasyTracker *sSharedTracker = nil;
 @implementation TrackedUIViewController
 
 - (void)viewDidAppear:(BOOL)animated {
+    
+    UIImage *backgroundImage = [UIImage imageNamed:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)?@"blackboard_1920":@"blackboard"];
+    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:backgroundImage];
+    
   [super viewDidAppear:animated];
 
   // Determine the class name of this view controller using reflection.

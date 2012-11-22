@@ -56,21 +56,12 @@
 
 - (void)viewDidLoad
 {
-    UIImage *backgroundImage = [UIImage imageNamed:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)?@"blackboard_1920":@"blackboard"];
-    
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:backgroundImage];
-    
-    
-    //bring up the GameCenter
-//    [[GameKitHelper sharedGameKitHelper] authenticateLocalPlayer];
     
     
     [self newGame];
     
     // this is actually a word lookup button
     self.hintButton.hidden = YES;
-    
-    
 }
 
 - (IBAction)newGame
@@ -115,8 +106,8 @@
     self.hintButton.hidden = YES;
     self.hintButton.highlighted = NO;
     
-    self.gameCenterButton.hidden = YES;
-    self.gameCenterButton.enabled = NO;
+//    self.gameCenterButton.hidden = YES;
+//    self.gameCenterButton.enabled = NO;
     [self enableButtons:YES];
     
 }

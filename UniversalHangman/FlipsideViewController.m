@@ -61,7 +61,7 @@ static int MAX_NUM_LETTERS = 26;
     self.navigationItem.rightBarButtonItem = noAdsItem;
     
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blackboard"]];
+//    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blackboard"]];
     
 //    CGSize size = CGSizeMake(320.0,460.0);
 //    self.contentSizeForViewInPopover = size;
