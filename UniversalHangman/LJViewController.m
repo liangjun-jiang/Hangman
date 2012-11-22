@@ -11,6 +11,7 @@
 
 #import <iAd/iAd.h>
 #import "GameKitHelper.h"
+#import "LJAppDelegate.h"
 @interface LJViewController ()<ADBannerViewDelegate, GameKitHelperProtocol>
 @property (nonatomic, retain) ADBannerView *bannerView;
 @property (nonatomic, retain) UIPopoverController *settingPopover;
@@ -33,7 +34,6 @@
 @synthesize bannerView = _bannerView;
 @synthesize settingPopover;
 @synthesize gameCenterButton;
-
 
 // init
 - (void)initDict
@@ -419,7 +419,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
     int64_t finalScore =  (int64_t)(self.isEvil)?10000*score:100*score;
-    NSLog(@"waht's the score to be sent: %lld",finalScore);
+//    NSLog(@"waht's the score to be sent: %lld",finalScore);
     GKScore * submitScore = [[GKScore alloc] initWithCategory:leaderboard];
     [submitScore setValue:finalScore];
     
@@ -442,11 +442,18 @@
     GKLeaderboardViewController * leaderboardViewController = [[GKLeaderboardViewController alloc] init];
     [leaderboardViewController setCategory:leaderboard];
     [leaderboardViewController setLeaderboardDelegate:self];
+    
+    if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        leaderboardViewController.modalPresentationStyle = UIModalPresentationFormSheet;
+
+    }
     [self presentViewController:leaderboardViewController animated:YES completion:nil];
 }
 
 - (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
