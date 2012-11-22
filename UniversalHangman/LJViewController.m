@@ -382,84 +382,7 @@
 }
 
 
-#define kEasyLeaderboardID @"Leaderboard"
-
-//- (IBAction)postToGameCenter:(id)sender{
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    
-//    float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
-//    
-//    GameKitHelper *gameKitHelper = [GameKitHelper sharedGameKitHelper];
-//    gameKitHelper.delegate = self;
-//    [gameKitHelper submitScore:score category:kEasyLeaderboardID];
-//    
-//}
-
-
-
-
-- (void)postToGameCenter{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
-    
-    GameKitHelper *gameKitHelper = [GameKitHelper sharedGameKitHelper];
-    gameKitHelper.delegate = self;
-    [gameKitHelper submitScore:score category:kEasyLeaderboardID];
-    
-    //    [[GameKitHelper sharedGameKitHelper] submitScore:(int64_t)score category:kEasyLeaderboardID];
-    
-    //    self.gameCenterController = [[GameCenterController alloc] initWithScore:(int)(self.isEvil)?10000*score:100*score];
-    //    self.gameCenterController.delegate = self;
-    //    self.gameCenterController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    //    [self presentModalViewController:self.gameCenterController animated:YES];
-    
-}
-
--(void) onScoresSubmitted:(bool)success
-{
-    if (success) {
-        //        NSLog(@"score submitted!");
-        if([GKLocalPlayer localPlayer].authenticated) {
-            NSArray *arr = [[NSArray alloc] initWithObjects:[GKLocalPlayer localPlayer].playerID, nil];
-            GKLeaderboard *board = [[GKLeaderboard alloc] initWithPlayerIDs:arr];
-            if(board != nil) {
-                board.timeScope = GKLeaderboardTimeScopeAllTime;
-                board.range = NSMakeRange(1, 1);
-                board.category = kEasyLeaderboardID;
-                
-                [board loadScoresWithCompletionHandler: ^(NSArray *scores, NSError *error) {
-                    NSString *message = @"";
-                    if (error != nil) {
-                        // handle the error.
-                        message = @"Error retrieving score.";
-                    } else if (scores != nil) {
-//                        NSLog(@"My Score: %lli", ((GKScore*)[scores objectAtIndex:0]).value);
-                        //                        NSLog(@"the gk score: %@",(GKScore *)scores);
-                        GKScore *score = [scores objectAtIndex:0];
-                        NSString *highestScore = [NSString stringWithFormat:@"%lli", score.value];
-                        NSString *rank =[NSString stringWithFormat:@"%d", score.rank];
-                        
-                        message = [NSString stringWithFormat:@"Your highest score is: %@, rank: %@",highestScore, rank];
-                    } else {
-                        
-                        message = @"Unable to show the scoreboard.";
-                    }
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Scoreboard Info" message:message delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-                    [alert show];
-                    
-                }];
-                
-            }
-        }
-        
-        } else
-        NSLog(@"Oops");
-}
-
-
 #pragma private method
-
 - (void)enableButtons:(BOOL)enabled
 {
     for (int i = 50; i<= 75; i++){
@@ -475,36 +398,11 @@
     
 }
 
-
-#pragma mark banner ad
-// banner view delegate methods
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    //    [self layoutAnimated:YES];
-    [self.view addSubview:self.bannerView];
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-    //    [self layoutAnimated:YES];
-}
-
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-    return YES;
-}
-
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-    
-}
-
 #pragma mark - Leaderboard method
 - (IBAction)showLeaderboardButtonAction:(id)event 
 {
 //    NSString * leaderboardCategory = @"com.appledts.GameCenterSampleApps.leaderboard.seconds";
-    NSString * leaderboardCategory = @"com.ljsportapps.hangman.leaderboard";
+    NSString * leaderboardCategory = @"com.ljsportapps.hangman.scoreboard";
     
     // The intent here is to show the leaderboard and then submit a score. If we try to submit the score first there is no guarentee
     // the server will have recieved the score when retreiving the current list
@@ -523,6 +421,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
     int64_t finalScore =  (int64_t)(self.isEvil)?10000*score:100*score;
+    NSLog(@"waht's the score to be sent: %lld",finalScore);
     GKScore * submitScore = [[GKScore alloc] initWithCategory:leaderboard];
     [submitScore setValue:finalScore];
     
@@ -559,5 +458,30 @@
 {
 //    [showLeaderboardButton setEnabled:enableGameCenter];
 }
+
+#pragma mark banner ad
+// banner view delegate methods
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    //    [self layoutAnimated:YES];
+    [self.view addSubview:self.bannerView];
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    //    [self layoutAnimated:YES];
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    return YES;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    
+}
+
 
 @end
