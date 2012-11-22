@@ -213,7 +213,11 @@
     NSString *largestKey = nil;
     // pick a random one from the largest equivalence classes array
     // arc4random get a random word between 0 and largestKeysArray-1
-    int randomIndex = arc4random() % largestKeysArray.count;
+    int randomIndex;
+    if (largestKeysArray.count !=0) {
+        randomIndex = arc4random() % largestKeysArray.count;
+    }
+    
 //    NSLog(@"Index %d out of 0 to %d",randomIndex, (largestKeysArray.count-1));
     largestKey = [largestKeysArray objectAtIndex:randomIndex];
     

@@ -21,10 +21,10 @@
 @property (nonatomic, retain) IBOutlet UILabel *guessesLabel;
 @property (nonatomic, retain) IBOutlet UISlider *lettersSlider;
 @property (nonatomic, retain) IBOutlet UISlider *guessesSlider;
-@property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
+//@property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) IBOutlet UISwitch *evilSwitch;
 @property (nonatomic, retain) IBOutlet UILabel *instructionLabel;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *noAdsItem;
+//@property (nonatomic, retain) IBOutlet UIBarButtonItem *noAdsItem;
 
 
 

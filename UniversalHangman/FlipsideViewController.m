@@ -17,10 +17,10 @@
 @synthesize guessesLabel=_guessesLabel;
 @synthesize lettersSlider=_lettersSlider;
 @synthesize guessesSlider=_guessesSlider;
-@synthesize navBar=_navBar;
+//@synthesize navBar=_navBar;
 @synthesize evilSwitch = _evilSwitch;
 @synthesize instructionLabel = _instructionLabel;
-@synthesize noAdsItem;
+//@synthesize noAdsItem;
 
 static int MIN_NUM_GUESSES = 1;
 static int MAX_NUM_GUESSES = 26;
@@ -38,22 +38,34 @@ static int MAX_NUM_LETTERS = 26;
 }
 
 #pragma mark - View lifecycle
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"PURCHASED"]) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.navBar.topItem.title = NSLocalizedString(@"HANGMANSETTINGS", @"Settings");
+    self.title = NSLocalizedString(@"HANGMANSETTINGS", @"Settings");
+    
+    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(done:)];
+    self.navigationItem.leftBarButtonItem = doneItem;
+    
+    UIBarButtonItem *noAdsItem = [[UIBarButtonItem alloc] initWithTitle:@"No Ads" style:UIBarButtonItemStyleDone target:self action:@selector(removeAds:)];
+    self.navigationItem.rightBarButtonItem = noAdsItem;
+    
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blackboard"]];
     
 //    CGSize size = CGSizeMake(320.0,460.0);
 //    self.contentSizeForViewInPopover = size;
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults boolForKey:@"PURCHASED"]) {
-        NSLog(@"not purchased");
-        self.noAdsItem = nil;
-    }
+    
     
     // set the slider min and max values
     self.guessesSlider.minimumValue = MIN_NUM_GUESSES;
@@ -63,7 +75,7 @@ static int MAX_NUM_LETTERS = 26;
     self.lettersSlider.maximumValue = MAX_NUM_LETTERS;
     
     // try to set the min and max length of words if no such words exist at the edges
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int minLetters = [[defaults objectForKey:@"minLetters"] intValue];
     int maxLetters = [[defaults objectForKey:@"maxLetters"] intValue];
     BOOL isEvil = [defaults boolForKey:@"isEvil"];
@@ -111,7 +123,7 @@ static int MAX_NUM_LETTERS = 26;
 
 #pragma mark - Actions
 
-- (IBAction)done:(id)sender
+- (void)done:(id)sender
 {
     // check that the number of guesses is not smaller than the number of letters
     int numLetters = self.lettersSlider.value;
@@ -194,13 +206,21 @@ static int MAX_NUM_LETTERS = 26;
    
     WordLookupViewController *lookup = [[WordLookupViewController alloc] initWithNibName:nil bundle:nil];
     lookup.delegate = self;
+    if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        lookup.modalPresentationStyle = UIModalPresentationCurrentContext;
+    }
     [self presentViewController:lookup animated:YES completion:nil];
 }
 
-- (IBAction)removeAds:(id)sender
+- (void)removeAds:(id)sender
 {
     MasterViewController *inApp = [[MasterViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:inApp];
+    if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        navController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    }
     [self presentViewController:navController animated:YES completion:nil];
     
 }
@@ -209,7 +229,6 @@ static int MAX_NUM_LETTERS = 26;
 - (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-//   [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

@@ -104,7 +104,7 @@
 //forIndexPath:indexPath];
 
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     }
     SKProduct * product = (SKProduct *) _products[indexPath.row];
     cell.textLabel.text = product.localizedTitle;

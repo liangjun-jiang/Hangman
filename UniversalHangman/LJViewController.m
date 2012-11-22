@@ -44,6 +44,19 @@
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults boolForKey:@"PURCHASED"]) {
+//        NSLog(@"not purchased!");
+        self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0, 44.0, self.view.frame.size.width, 44.0)];
+        self.bannerView.delegate = self;
+    }
+    
+}
+
+
 - (void)viewDidLoad
 {
     UIImage *backgroundImage = [UIImage imageNamed:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)?@"blackboard_1920":@"blackboard"];
@@ -60,13 +73,6 @@
     // this is actually a word lookup button
     self.hintButton.hidden = YES;
     
-    
-    // ads
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults boolForKey:@"PURCHASED"]) {
-        self.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0.0, 44.0, self.view.frame.size.width, 44.0)];
-        self.bannerView.delegate = self;
-    }
     
 }
 
@@ -302,16 +308,6 @@
     [self newGame];
 }
 
-//- (void)gameCenterViewControllerDidFinish:(GameCenterController *)controller {
-//    if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-//    {
-//        [self.settingPopover dismissPopoverAnimated:YES];
-//    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-//    {
-//        [self dismissModalViewControllerAnimated:YES];
-//    }
-//    
-//}
 
 - (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
 {
@@ -321,7 +317,6 @@
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
-//        [self dismissModalViewControllerAnimated:YES];
     }
     
 }
@@ -330,16 +325,16 @@
 {
     FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
     controller.delegate = self;
-    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:controller];
     if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        self.settingPopover = [[UIPopoverController alloc] initWithContentViewController:controller];
+        self.settingPopover = [[UIPopoverController alloc] initWithContentViewController:navController];
         //        self.settingPopover.popoverContentSize=CGSizeMake(320.0, 460.0);
         [self.settingPopover presentPopoverFromBarButtonItem:sender  permittedArrowDirections:UIPopoverArrowDirectionRight animated:YES];
         
     } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
         controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentViewController:controller animated:YES completion:nil];
+        [self presentViewController:navController animated:YES completion:nil];
         
     }
     
@@ -439,7 +434,7 @@
                         // handle the error.
                         message = @"Error retrieving score.";
                     } else if (scores != nil) {
-                        NSLog(@"My Score: %lli", ((GKScore*)[scores objectAtIndex:0]).value);
+//                        NSLog(@"My Score: %lli", ((GKScore*)[scores objectAtIndex:0]).value);
                         //                        NSLog(@"the gk score: %@",(GKScore *)scores);
                         GKScore *score = [scores objectAtIndex:0];
                         NSString *highestScore = [NSString stringWithFormat:@"%lli", score.value];
