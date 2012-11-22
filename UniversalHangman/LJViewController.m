@@ -416,8 +416,6 @@
 // Using time as as an int of seconds from 1970 gives us a good rolling number to test against
 - (void)insertCurrentTimeIntoLeaderboard:(NSString*)leaderboard
 {
-//    NSDate *today = [NSDate date];
-//    int64_t score = [today timeIntervalSince1970];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     float score = [[defaults objectForKey:@"numLetters"] floatValue] / [[defaults objectForKey:@"numGuesses"] floatValue] ;
     int64_t finalScore =  (int64_t)(self.isEvil)?10000*score:100*score;

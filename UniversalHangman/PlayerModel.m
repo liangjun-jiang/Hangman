@@ -138,9 +138,11 @@
         [score reportScoreWithCompletionHandler:^(NSError *error){
             if (!error || (![error code] && ![error domain])) {
                 // Score submitted correctly. Resubmit others
+//                NSLog(@"success submitted");
                 [self resubmitStoredScores];
             } else {
-                // Store score for next authentication. 
+                // Store score for next authentication.
+//                NSLog(@"have to wait for next time to submit");
                 [self storeScore:score];
             }
         }];
