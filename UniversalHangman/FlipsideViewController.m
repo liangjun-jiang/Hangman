@@ -205,12 +205,15 @@ static int MAX_NUM_LETTERS = 26;
 - (IBAction)showEvil:(id)sender {
    
     WordLookupViewController *lookup = [[WordLookupViewController alloc] initWithNibName:nil bundle:nil];
-    lookup.delegate = self;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:lookup];
     if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
-        lookup.modalPresentationStyle = UIModalPresentationCurrentContext;
+        navController.modalPresentationStyle = UIModalPresentationCurrentContext;
+       
     }
-    [self presentViewController:lookup animated:YES completion:nil];
+//    [self.navigationController pushViewController:lookup animated:YES];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 - (void)removeAds:(id)sender
@@ -226,9 +229,9 @@ static int MAX_NUM_LETTERS = 26;
 }
 
 #pragma mark - Delegate method
-- (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
+//{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 @end

@@ -15,7 +15,7 @@
 
 #import "WordLookupViewController.h"
 
-@interface LJViewController : TrackedUIViewController <FlipsideViewControllerDelegate,  WordLookupViewControllerDelegate, GKLeaderboardViewControllerDelegate>
+@interface LJViewController : TrackedUIViewController <FlipsideViewControllerDelegate,   GKLeaderboardViewControllerDelegate>
 {
     uint64_t context;
 }

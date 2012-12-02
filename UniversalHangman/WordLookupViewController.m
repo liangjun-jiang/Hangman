@@ -9,13 +9,13 @@
 #import "WordLookupViewController.h"
 
 #define DICTONARY_URL @"http://www.bing.com/Dictionary/search?q="
-#define HANGMAN_INSTRUCTION @"http://ljsportapps.com/evilHangman.pdf"
+#define HANGMAN_INSTRUCTION @"http://www.theproblemsite.com/games/hangmanvariation.asp"
 
 @interface WordLookupViewController ()<UIWebViewDelegate>
 
 @property (nonatomic,retain) IBOutlet UIActivityIndicatorView* activityIndicator;
 
-@property (nonatomic,retain) IBOutlet UINavigationBar* navBar;
+//@property (nonatomic,retain) IBOutlet UINavigationBar* navBar;
 @property (nonatomic,retain) IBOutlet UIWebView* webView;
 @property (nonatomic, retain) NSString *word;
 @property (nonatomic, retain) NSString *urlStr;
@@ -24,17 +24,21 @@
 @end
 
 @implementation WordLookupViewController
-@synthesize navBar = _navBar;
+//@synthesize navBar = _navBar;
 @synthesize webView = _webView;
 @synthesize word = _word;
-@synthesize delegate = _delegate;
+//@synthesize delegate = _delegate;
 @synthesize activityIndicator = _activityIndicator;
 
 
-- (IBAction)done:(id)sender {
-    
-    [self.delegate wordLookupViewControllerDidFinish:self];
-    
+//- (IBAction)done:(id)sender {
+//    
+//    [self.delegate wordLookupViewControllerDidFinish:self];
+//    
+//}
+
+- (void)onDone:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (id) initWithWord:(NSString *)mWord {
@@ -64,12 +68,15 @@
     [super viewDidLoad];
     
     
-    CGSize size = CGSizeMake(320.0,460.0);
-    self.contentSizeForViewInPopover = size;
+//    CGSize size = CGSizeMake(320.0,460.0);
+//    self.contentSizeForViewInPopover = size;
     
     self.activityIndicator.hidden = YES;
-    self.navBar.topItem.title = self.word;
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blackboard"]];
+    self.title = self.word;
+    
+    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onDone:)];
+    self.navigationItem.rightBarButtonItem = doneItem;
+//    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blackboard"]];
     // Do any additional setup after loading the view from its nib.
     NSURL *url;
     if (self.word) {

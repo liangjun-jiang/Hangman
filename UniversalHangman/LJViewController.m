@@ -300,17 +300,17 @@
 }
 
 
-- (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
-{
-    if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        [self.settingPopover dismissPopoverAnimated:YES];
-    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-    {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    
-}
+//- (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller
+//{
+//    if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//    {
+//        [self.settingPopover dismissPopoverAnimated:YES];
+//    } else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+//    {
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }
+//    
+//}
 
 - (IBAction)showInfo:(id)sender
 {
@@ -334,8 +334,11 @@
 
 - (IBAction)showHint:(id)sender
 {
-    WordLookupViewController *wlvc = [[WordLookupViewController alloc] initWithWord:self.wordLabel.text];
-    wlvc.delegate = self;
+    UIReferenceLibraryViewController* wlvc = [[UIReferenceLibraryViewController alloc] initWithTerm: self.wordLabel.text];
+//    [self presentModalViewController:dictionaryView animated:YES];
+//    
+//    WordLookupViewController *wlvc = [[WordLookupViewController alloc] initWithWord:self.wordLabel.text];
+//    wlvc.delegate = self;
     if  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         self.settingPopover = [[UIPopoverController alloc] initWithContentViewController:wlvc];

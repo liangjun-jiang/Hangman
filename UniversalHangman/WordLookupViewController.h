@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "EasyTracker.h"
 
-@protocol WordLookupViewControllerDelegate;
+//@protocol WordLookupViewControllerDelegate;
 @interface WordLookupViewController : TrackedUIViewController
 
-@property (nonatomic, assign) id <WordLookupViewControllerDelegate> delegate;
+//@property (nonatomic, assign) id <WordLookupViewControllerDelegate> delegate;
 - (id)initWithWord:(NSString *)mWord;
 @end
 
-@protocol WordLookupViewControllerDelegate
-- (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller;
-@end
+//@protocol WordLookupViewControllerDelegate
+//- (void)wordLookupViewControllerDidFinish:(WordLookupViewController *)controller;
+//@end

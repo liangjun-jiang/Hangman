@@ -12,7 +12,7 @@
 #import "WordLookupViewController.h"
 @protocol FlipsideViewControllerDelegate;
 
-@interface FlipsideViewController : TrackedUIViewController<WordLookupViewControllerDelegate> {
+@interface FlipsideViewController : TrackedUIViewController {
 
 }
 

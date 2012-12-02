@@ -486,7 +486,7 @@
 		D6CB1A2D1650292200D1A257 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Liangjun Jiang (NLHVYBKJKH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UniversalHangman/UniversalHangman-Prefix.pch";
 				INFOPLIST_FILE = "UniversalHangman/UniversalHangman-Info.plist";
@@ -497,7 +497,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Hangman;
-				PROVISIONING_PROFILE = "2B034DB9-0549-48EF-B111-38601C77699B";
+				PROVISIONING_PROFILE = "DE200AE2-CBCE-4C51-B27C-EA19F6C2DBFC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -505,7 +505,7 @@
 		D6CB1A2E1650292200D1A257 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Liangjun Jiang (NLHVYBKJKH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UniversalHangman/UniversalHangman-Prefix.pch";
 				INFOPLIST_FILE = "UniversalHangman/UniversalHangman-Info.plist";
@@ -516,7 +516,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Hangman;
-				PROVISIONING_PROFILE = "2B034DB9-0549-48EF-B111-38601C77699B";
+				PROVISIONING_PROFILE = "DE200AE2-CBCE-4C51-B27C-EA19F6C2DBFC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
