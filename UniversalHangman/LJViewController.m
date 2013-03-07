@@ -60,8 +60,7 @@
     
     [self newGame];
     
-    // this is actually a word lookup button
-    self.hintButton.hidden = YES;
+    
 }
 
 - (IBAction)newGame
@@ -110,6 +109,9 @@
     self.gameCenterButton.enabled = NO;
     [self enableButtons:YES];
     
+    // this is actually a word lookup button
+    self.hintButton.hidden = YES;
+    
 }
 
 //Letter button pressed
@@ -135,10 +137,10 @@
             NSString *word;
             
             if (self.isEvil){
-                word = [self.equivalenceClass guess:guessedLetter];
+                word = [self.equivalenceClass guess:guessedLetter.lowercaseString];
             }
             else {
-                word = [self.equivalenceClass guess:guessedLetter withGuessed:self.wordLabel.text];
+                word = [self.equivalenceClass guess:guessedLetter.lowercaseString withGuessed:self.wordLabel.text];
             }
             
             // subtract the number of guesses left if the guess is incorrect
@@ -281,6 +283,39 @@
     self.hintButton.highlighted = YES;
     
     [self enableButtons:NO];
+    
+//    self.directionsLabel.text = NSLocalizedString(@"LOSE", @"The correct word is");
+//    
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+//    NSArray *tmp = [NSArray arrayWithContentsOfFile:path];
+//    __block NSDictionary *selected = nil;
+//    __block NSString *rightWord = (self.isEvil)?self.equivalenceClass.getTheWord:self.equivalenceClass.word;
+//    [tmp enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        NSDictionary *item = (NSDictionary *)obj;
+//        if ([obj[@"word"] isEqualToString:rightWord]) {
+//            selected = item;
+//            *stop = YES;
+//        }
+//        
+//    }];
+//    // update the word
+//    //    if (self.isEvil) {
+//    //        self.wordLabel.text = self.equivalenceClass.getTheWord;
+//    //    } else {
+//    // stupid to do it here
+//    
+//    //    NSString *message = [NSString stringWithFormat:@"%@, %@", selected[@"word"], selected[@"meaning"]];
+//    self.wordLabel.text = selected[@"word"];
+//    self.guessedLettersLabel.text = selected[@"meaning"];
+//    //    }
+//    
+//    self.wordLabel.textColor = [UIColor redColor];
+//    // let the user learn the word
+//    self.hintButton.hidden = NO;
+//    self.hintButton.highlighted = YES;
+//    
+//    [self enableButtons:NO];
+
     
 }
 
@@ -448,7 +483,11 @@
 - (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController
 {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        self.gameCenterButton.enabled = NO;
+        self.gameCenterButton.hidden = YES;
+        
+    }];
 
 }
 

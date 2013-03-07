@@ -59,8 +59,13 @@
     NSArray *tmp = [NSArray arrayWithContentsOfFile:path];
 //    NSLog(@"Number of items in the words.plist %i", tmp.count);
     
-    for (NSString * item in tmp)
+    for (NSDictionary * dict in tmp)
+        
+        //    for (NSString * item in tmp)
     {
+        NSString *item = dict[@"word"];
+//    for (NSString * item in tmp)
+//    {
         NSNumber *wordLength = [NSNumber numberWithInteger:item.length];
         NSMutableArray *tmpArray = [self.wordsByLengthDictionary objectForKey:wordLength];
         if (tmpArray == nil)
@@ -120,7 +125,7 @@
     
     if (!self.evil) {
         self.word = [self getTheWord];
-//        NSLog(@"the no-evil word: %@",self.word);
+        NSLog(@"the no-evil word: %@",self.word);
     }
 
 }

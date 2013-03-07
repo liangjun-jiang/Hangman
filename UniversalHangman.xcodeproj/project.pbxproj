@@ -10,6 +10,7 @@
 		D63D61D2165E901000D3F73F /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D63D61D1165E901000D3F73F /* PlayerModel.m */; };
 		D63D61D8165E943300D3F73F /* gamecenter.png in Resources */ = {isa = PBXBuildFile; fileRef = D63D61D4165E943300D3F73F /* gamecenter.png */; };
 		D63D61D9165E943300D3F73F /* gamecenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D63D61D6165E943300D3F73F /* gamecenter@2x.png */; };
+		D66072C416E90388000CDA89 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = D66072C316E90388000CDA89 /* words.plist */; };
 		D6CB1A0A1650292200D1A257 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1A091650292200D1A257 /* UIKit.framework */; };
 		D6CB1A0C1650292200D1A257 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1A0B1650292200D1A257 /* Foundation.framework */; };
 		D6CB1A0E1650292200D1A257 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CB1A0D1650292200D1A257 /* CoreGraphics.framework */; };
@@ -53,7 +54,7 @@
 		D6D5DF40165B2C7800C8015A /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF38165B2C7800C8015A /* blackboard.png */; };
 		D6D5DF41165B2C7800C8015A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF39165B2C7800C8015A /* bg.png */; };
 		D6D5DF42165B2C7800C8015A /* navigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF3A165B2C7800C8015A /* navigationBar.png */; };
-		D6D5DF45165B2C8C00C8015A /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF43165B2C8C00C8015A /* words.plist */; };
+		D6D5DF45165B2C8C00C8015A /* manyWords.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF43165B2C8C00C8015A /* manyWords.plist */; };
 		D6D5DF46165B2C8C00C8015A /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF44165B2C8C00C8015A /* defaults.plist */; };
 		D6D5DF48165B2DCF00C8015A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6D5DF47165B2DCF00C8015A /* Localizable.strings */; };
 		D6D5DF51165B30E300C8015A /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D5DF4E165B30E200C8015A /* IAPHelper.m */; };
@@ -66,6 +67,7 @@
 		D63D61D1165E901000D3F73F /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
 		D63D61D5165E943300D3F73F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/gamecenter.png; sourceTree = "<group>"; };
 		D63D61D7165E943300D3F73F /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/gamecenter@2x.png"; sourceTree = "<group>"; };
+		D66072C316E90388000CDA89 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		D6CB1A051650292200D1A257 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6CB1A091650292200D1A257 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6CB1A0B1650292200D1A257 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,7 +125,7 @@
 		D6D5DF38165B2C7800C8015A /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
 		D6D5DF39165B2C7800C8015A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		D6D5DF3A165B2C7800C8015A /* navigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBar.png; sourceTree = "<group>"; };
-		D6D5DF43165B2C8C00C8015A /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
+		D6D5DF43165B2C8C00C8015A /* manyWords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = manyWords.plist; sourceTree = "<group>"; };
 		D6D5DF44165B2C8C00C8015A /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		D6D5DF47165B2DCF00C8015A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D6D5DF4D165B30E200C8015A /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
@@ -239,10 +241,11 @@
 		D6CB1A101650292200D1A257 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D66072C316E90388000CDA89 /* words.plist */,
 				D63D61D4165E943300D3F73F /* gamecenter.png */,
 				D63D61D6165E943300D3F73F /* gamecenter@2x.png */,
 				D6D5DF47165B2DCF00C8015A /* Localizable.strings */,
-				D6D5DF43165B2C8C00C8015A /* words.plist */,
+				D6D5DF43165B2C8C00C8015A /* manyWords.plist */,
 				D6D5DF44165B2C8C00C8015A /* defaults.plist */,
 				D6D5DF33165B2C7800C8015A /* blackboard_1920.png */,
 				D6D5DF34165B2C7800C8015A /* cross.png */,
@@ -356,11 +359,12 @@
 				D6D5DF40165B2C7800C8015A /* blackboard.png in Resources */,
 				D6D5DF41165B2C7800C8015A /* bg.png in Resources */,
 				D6D5DF42165B2C7800C8015A /* navigationBar.png in Resources */,
-				D6D5DF45165B2C8C00C8015A /* words.plist in Resources */,
+				D6D5DF45165B2C8C00C8015A /* manyWords.plist in Resources */,
 				D6D5DF46165B2C8C00C8015A /* defaults.plist in Resources */,
 				D6D5DF48165B2DCF00C8015A /* Localizable.strings in Resources */,
 				D63D61D8165E943300D3F73F /* gamecenter.png in Resources */,
 				D63D61D9165E943300D3F73F /* gamecenter@2x.png in Resources */,
+				D66072C416E90388000CDA89 /* words.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

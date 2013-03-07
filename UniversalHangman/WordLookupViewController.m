@@ -9,7 +9,8 @@
 #import "WordLookupViewController.h"
 
 #define DICTONARY_URL @"http://www.bing.com/Dictionary/search?q="
-#define HANGMAN_INSTRUCTION @"http://www.theproblemsite.com/games/hangmanvariation.asp"
+//#define HANGMAN_INSTRUCTION @"http://www.theproblemsite.com/games/hangmanvariation.asp"
+#define HANGMAN_INSTRUCTION @"http://www.stanford.edu/class/cs106l/handouts/assignment-2-evil-hangman"
 
 @interface WordLookupViewController ()<UIWebViewDelegate>
 
